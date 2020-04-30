@@ -42,5 +42,8 @@ url=raw.githubusercontent.com/kisslinux/kiss/master/contrib |
 wget "$url/kiss-chroot"
 chmod +x kiss-chroot
 tar xvf kiss-chroot.tar.xz -C /mnt --strip-components 1
+mount /dev/sda1 /mnt/gentoo/boot
+mkdir /mnt/gentoo/boot/efi
+mount /dev/sda2 /mnt/gentoo/boot/efi
 ./kiss-chroot /mnt/gentoo
 ```

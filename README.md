@@ -38,7 +38,7 @@ mkfs.vfat -F 32 /dev/sda2
 mount /dev/sda3 /mnt/gentoo
 url=github.com/kisslinux/repo/releases/download/1.9.11
 wget "$url/kiss-chroot.tar.xz"
-url=raw.githubusercontent.com/kisslinux/kiss/master/contrib |
+url=raw.githubusercontent.com/kisslinux/kiss/master/contrib
 wget "$url/kiss-chroot"
 chmod +x kiss-chroot
 tar xvf kiss-chroot.tar.xz -C /mnt --strip-components 1
@@ -46,4 +46,54 @@ mount /dev/sda1 /mnt/gentoo/boot
 mkdir /mnt/gentoo/boot/efi
 mount /dev/sda2 /mnt/gentoo/boot/efi
 ./kiss-chroot /mnt/gentoo
+export CFLAGS="-O3 -pipe -march=native"
+export CXXFLAGS="-O3 -pipe -march=native"
+export MAKEFLAGS="-j8"
+kiss update
+cd /ver/db/kiss/installed && kiss build *
+kiss b e2fsprogs
+kiss i e2fsprogs
+kiss b dosfstools
+kiss i dosfstools
+kiss b util-linux
+kiss i util-linux
+kiss b eudev
+kiss i eudev
+kiss b dhcpcd
+kiss i dhcpcd
+kiss b wpa_supplicant
+kiss i wpa_supplicant
+kiss b libelf
+kiss i libelf
+kiss b ncurses
+kiss i ncurses
+kiss b perl
+kiss i perl
+kiss b git
+kiss i git
+cd /usr/src
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
+tar xvf linux-*
+cd linux-*
+wget ?????
+make -j8
+make modules_install
+make install
+mv /boot/vmlinuz /boot/vmlinuz-5.6.8
+mv /boot/System.map /boot/System.map-5.6.8
+kiss b grub
+kiss i grub
+kiss b efibootmgr
+kiss i efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=kiss
+grub-mkconfig -o /boot/grub/grub.cfg
+kiss b baseinit
+kiss i baseinit
+adduser mc
+kiss b xorg-server xinit xf86-input-libinput
+kiss i xorg-server xinit xf86-input-libinput
+kiss b liberation-fonts
+kiss i liberation-fonts
+addgroup mc video
+addgroup mc audio
 ```

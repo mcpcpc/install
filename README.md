@@ -69,12 +69,6 @@ kiss b ncurses
 kiss i ncurses
 kiss b perl
 kiss i perl
-kiss b git
-kiss i git
-kiss b vim
-kiss i vim
-kiss b opendoas
-kiss i opendoas
 cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
 tar xvf linux-*
@@ -100,4 +94,12 @@ kiss b liberation-fonts
 kiss i liberation-fonts
 addgroup mc video
 addgroup mc audio
+kiss b git
+kiss i git
+kiss b vim
+kiss i vim
+kiss b opendoas
+kiss i opendoas
+kiss b alsa-utils
+kiss i alsa-utils
 ```

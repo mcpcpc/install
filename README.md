@@ -71,6 +71,10 @@ kiss b perl
 kiss i perl
 kiss b git
 kiss i git
+kiss b vim
+kiss i vim
+kiss b opendoas
+kiss i opendoas
 cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
 tar xvf linux-*

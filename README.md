@@ -67,7 +67,7 @@ kiss b wpa_supplicant
 kiss i wpa_supplicant
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
-wget 
+wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf
 kiss b libelf
 kiss i libelf
 kiss b ncurses
@@ -78,7 +78,7 @@ cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
 tar xvf linux-*
 cd linux-*
-wget ?????
+wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
 make -j8
 make modules_install
 make install

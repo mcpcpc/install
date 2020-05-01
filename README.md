@@ -32,14 +32,15 @@ Do you want to proceed? (Y/N): Y ↵
 ```
 
 ```sh
+url1=github.com/kisslinux/repo/releases/download/1.9.11
+url2=raw.githubusercontent.com/kisslinux/kiss/master/contrib
+url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkfs.vfat -F 32 /dev/sda2
 mount /dev/sda3 /mnt/gentoo
-url=github.com/kisslinux/repo/releases/download/1.9.11
-wget "$url/kiss-chroot.tar.xz"
-url=raw.githubusercontent.com/kisslinux/kiss/master/contrib
-wget "$url/kiss-chroot"
+wget "$url1/kiss-chroot.tar.xz"
+wget "$url2/kiss-chroot"
 chmod +x kiss-chroot
 tar xvf kiss-chroot.tar.xz -C /mnt --strip-components 1
 mount /dev/sda1 /mnt/gentoo/boot
@@ -67,7 +68,7 @@ kiss b wpa_supplicant
 kiss i wpa_supplicant
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
-wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf
+wget "$url3/wpa_supplicant.conf"
 kiss b libelf
 kiss i libelf
 kiss b ncurses
@@ -78,7 +79,7 @@ cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
 tar xvf linux-*
 cd linux-*
-wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
+wget "$url3/.config"
 make -j8
 make modules_install
 make install

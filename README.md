@@ -76,6 +76,11 @@ kiss b ncurses
 kiss i ncurses
 kiss b perl
 kiss i perl
+mkdir /usr/lib/firmware
+cd /usr/lib/firmware
+wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-22.ucode
+wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-27.ucode
+wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-29.ucode
 cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
 tar xvf linux-*

@@ -32,17 +32,18 @@ Do you want to proceed? (Y/N): Y ↵
 ```
 
 ```sh
-url1=github.com/kisslinux/repo/releases/download/1.9.11
-url2=raw.githubusercontent.com/kisslinux/kiss/master/contrib
-url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
+tmux
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkfs.vfat -F 32 /dev/sda2
 mount /dev/sda3 /mnt/gentoo
+url1=github.com/kisslinux/repo/releases/download/1.9.11
+url2=raw.githubusercontent.com/kisslinux/kiss/master/contrib
+url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url1/kiss-chroot.tar.xz"
 wget "$url2/kiss-chroot"
 chmod +x kiss-chroot
-tar xvf kiss-chroot.tar.xz -C /mnt --strip-components 1
+tar xvf kiss-chroot.tar.xz -C /mnt/gentoo --strip-components 1
 mount /dev/sda1 /mnt/gentoo/boot
 mkdir /mnt/gentoo/boot/efi
 mount /dev/sda2 /mnt/gentoo/boot/efi

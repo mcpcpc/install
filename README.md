@@ -105,7 +105,7 @@ kiss b vim
 kiss i vim
 #kiss b opendoas
 #kiss i opendoas
-echo 'permit nopass keepenv :wheel' > /etc/doas.conf
+#echo 'permit nopass keepenv :wheel' > /etc/doas.conf
 kiss b openssh
 kiss i openssh
 kiss b alsa-utils

@@ -102,6 +102,8 @@ kiss b vim
 kiss i vim
 kiss b opendoas
 kiss i opendoas
+kiss b openssh
+kiss i openssh
 kiss b alsa-utils
 kiss i alsa-utils
 ```

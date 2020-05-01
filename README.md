@@ -39,7 +39,6 @@ mkfs.vfat -F 32 /dev/sda2
 mount /dev/sda3 /mnt/gentoo
 url1=github.com/kisslinux/repo/releases/download/1.9.11
 url2=raw.githubusercontent.com/kisslinux/kiss/master/contrib
-url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url1/kiss-chroot.tar.xz"
 wget "$url2/kiss-chroot"
 chmod +x kiss-chroot
@@ -69,6 +68,7 @@ kiss b wpa_supplicant
 kiss i wpa_supplicant
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
+url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url3/wpa_supplicant.conf"
 kiss b libelf
 kiss i libelf

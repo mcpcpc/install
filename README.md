@@ -66,16 +66,28 @@ kiss b dhcpcd
 kiss i dhcpcd
 kiss b wpa_supplicant
 kiss i wpa_supplicant
-mkdir /etc/wpa_supplicant
-cd /etc/wpa_supplicant
-url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
-wget "$url3/wpa_supplicant.conf"
 kiss b libelf
 kiss i libelf
 kiss b ncurses
 kiss i ncurses
 kiss b perl
 kiss i perl
+kiss b git
+kiss i git
+kiss b vim
+kiss i vim
+kiss b openssh
+kiss i openssh
+kiss b alsa-utils
+kiss i alsa-utils
+kiss b xorg-server xinit xf86-input-libinput
+kiss i xorg-server xinit xf86-input-libinput
+kiss b liberation-fonts
+kiss i liberation-fonts
+mkdir /etc/wpa_supplicant
+cd /etc/wpa_supplicant
+url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
+wget "$url3/wpa_supplicant.conf"
 mkdir /usr/lib/firmware
 cd /usr/lib/firmware
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-22.ucode
@@ -100,23 +112,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 kiss b baseinit
 kiss i baseinit
 adduser mc
-kiss b xorg-server xinit xf86-input-libinput
-kiss i xorg-server xinit xf86-input-libinput
-kiss b liberation-fonts
-kiss i liberation-fonts
 addgroup mc video
 addgroup mc audio
-kiss b git
-kiss i git
-kiss b vim
-kiss i vim
-#kiss b opendoas
-#kiss i opendoas
-#echo 'permit nopass keepenv :wheel' > /etc/doas.conf
-kiss b openssh
-kiss i openssh
-kiss b alsa-utils
-kiss i alsa-utils
+
 ln -s /etc/sv/udevd/ /var/service
 ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service

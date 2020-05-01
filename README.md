@@ -65,6 +65,9 @@ kiss b dhcpcd
 kiss i dhcpcd
 kiss b wpa_supplicant
 kiss i wpa_supplicant
+mkdir /etc/wpa_supplicant
+cd /etc/wpa_supplicant
+wget 
 kiss b libelf
 kiss i libelf
 kiss b ncurses

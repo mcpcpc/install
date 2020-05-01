@@ -103,8 +103,8 @@ kiss b git
 kiss i git
 kiss b vim
 kiss i vim
-kiss b opendoas
-kiss i opendoas
+#kiss b opendoas
+#kiss i opendoas
 echo 'permit nopass keepenv :wheel' > /etc/doas.conf
 kiss b openssh
 kiss i openssh

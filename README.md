@@ -110,6 +110,7 @@ kiss i openssh
 kiss b alsa-utils
 kiss i alsa-utils
 ln -s /etc/sv/udevd/ /var/service
+ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service
 ln -s /etc/sv/sshd/ /var/service
 ```

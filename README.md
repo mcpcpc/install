@@ -53,7 +53,7 @@ export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="-O3 -pipe -march=native"
 export MAKEFLAGS="-j8"
 kiss update
-cd /ver/db/kiss/installed && kiss build *
+cd /var/db/kiss/installed && kiss build *
 kiss b e2fsprogs
 kiss i e2fsprogs
 kiss b dosfstools

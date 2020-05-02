@@ -120,3 +120,9 @@ ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service
 ln -s /etc/sv/sshd/ /var/service
 ```
+
+```sh
+git clone https://github.com/dylanaraps/pfetch.git
+install pfetch/pfetch /usr/local/bin/
+ls -l /usr/local/bin/pfetch
+```

@@ -78,12 +78,6 @@ kiss b vim
 kiss i vim
 kiss b openssh
 kiss i openssh
-kiss b alsa-utils
-kiss i alsa-utils
-kiss b xorg-server xinit xf86-input-libinput
-kiss i xorg-server xinit xf86-input-libinput
-kiss b liberation-fonts
-kiss i liberation-fonts
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
 url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
@@ -125,4 +119,13 @@ ln -s /etc/sv/sshd/ /var/service
 git clone https://github.com/dylanaraps/pfetch.git
 install pfetch/pfetch /usr/local/bin/
 ls -l /usr/local/bin/pfetch
+```
+
+```
+kiss b alsa-utils
+kiss i alsa-utils
+kiss b xorg-server xinit xf86-input-libinput
+kiss i xorg-server xinit xf86-input-libinput
+kiss b liberation-fonts
+kiss i liberation-fonts
 ```

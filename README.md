@@ -86,6 +86,8 @@ tar xvf linux-*
 cd linux-*
 url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url3/.config"
+wget https://k1ss.org/dist/kernel-no-perl.patch
+git apply -v kernel-no-perl.patch
 make -j8
 make modules_install
 make install

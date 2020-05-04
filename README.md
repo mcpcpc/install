@@ -125,7 +125,14 @@ ls -l /usr/local/bin/pfetch
 kiss b alsa-utils
 kiss i alsa-utils
 kiss b xorg-server xinit xf86-input-libinput
-kiss i xorg-server xinit xf86-input-libinput
 kiss b liberation-fonts
 kiss i liberation-fonts
+kiss b dmenu
+kiss i dmenu
+kiss b st
+kiss i st
+kiss b dwm
+kiss i dwm
+kiss b surf
+kiss i surf
 ```

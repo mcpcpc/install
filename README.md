@@ -62,10 +62,6 @@ kiss b util-linux
 kiss i util-linux
 kiss b eudev
 kiss i eudev
-kiss b dhcpcd
-kiss i dhcpcd
-kiss b wpa_supplicant
-kiss i wpa_supplicant
 kiss b libelf
 kiss i libelf
 kiss b ncurses
@@ -78,10 +74,6 @@ kiss b vim
 kiss i vim
 kiss b openssh
 kiss i openssh
-mkdir /etc/wpa_supplicant
-cd /etc/wpa_supplicant
-url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
-wget "$url3/wpa_supplicant.conf"
 mkdir /usr/lib/firmware
 cd /usr/lib/firmware
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-22.ucode
@@ -91,6 +83,7 @@ cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
 tar xvf linux-*
 cd linux-*
+url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url3/.config"
 make -j8
 make modules_install
@@ -108,7 +101,13 @@ kiss i baseinit
 adduser mc
 addgroup mc video
 addgroup mc audio
-
+kiss b dhcpcd
+kiss i dhcpcd
+kiss b wpa_supplicant
+kiss i wpa_supplicant
+mkdir /etc/wpa_supplicant
+cd /etc/wpa_supplicant
+wget "$url3/wpa_supplicant.conf"
 ln -s /etc/sv/udevd/ /var/service
 ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service

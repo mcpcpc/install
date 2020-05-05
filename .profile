@@ -16,6 +16,6 @@ paste () {
 [34;1m   ([35m<> [34m|     [31mkernel[m: ${k:-linux}
 [34;1m  / [37m__  [34m\\    [31mpkgs[m:   $#
 [34;1m ( [37m/  \\ [34m/|   [31muptime[m:${u:-0m}
-[35;1m_[34m/\\ [37m__)[34m/[35m_[34m)   [31mmemory[m: ${z:-?}MB / ${y:-?}MB
-[35;1m\/[34m-____[35m\/    [31mshell[m:  ${SHELL:-/bin/sh}
+[35;1m_[34m/\\ [37m__)[34m/[35m_[34m)   [31mshell[m:  ${SHELL:-/bin/sh}
+[35;1m\/[34m-____[35m\/    [31mmemory[m: ${z:-?}MB / ${y:-?}MB
 ") 2>/dev/null

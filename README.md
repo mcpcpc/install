@@ -66,8 +66,6 @@ kiss b libelf
 kiss i libelf
 kiss b ncurses
 kiss i ncurses
-kiss b perl
-kiss i perl
 kiss b git
 kiss i git
 kiss b vim

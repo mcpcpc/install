@@ -128,10 +128,19 @@ git clone https://git.suckless.org/dmenu
 cd dmenu && make clean install && cd .. && rm -r dmenu
 ```
 
+```sh
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/bud
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/x
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr
+
+```
+
 ```
 kiss b alsa-utils
 kiss i alsa-utils
 kiss b xorg-server xinit xf86-input-libinput
+kiss b liberation-fonts
+kiss i liberation-fonts
 kiss b xf86-video-amdgpu
 kiss i xf86-video-amdgpu
 kiss b sowm

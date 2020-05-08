@@ -157,13 +157,13 @@ kiss b xf86-video-amdgpu
 kiss i xf86-video-amdgpu
 kiss b st
 kiss i st
+kiss b mpv
+kiss i mpv
 ```
 
 ```
 kiss b sowm
 kiss i sowm
-kiss b mpv
-kiss i mpv
 kiss b firefox
 kiss i firefox
 ```

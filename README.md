@@ -130,6 +130,7 @@ cd dmenu && make clean install && cd .. && rm -r dmenu
 
 ```sh
 wget https://imagemagick.org/download/ImageMagick.tar.gz
+tar xvzf ImageMagick.tar.gz
 cd ImageMagick*
 ./configure
 make

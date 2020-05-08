@@ -138,9 +138,13 @@ make install
 
 ```sh
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/bud && chmod +x bud
+install bud /usr/local/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x
+install x /usr/local/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr
+install scr /usr/local/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe
+install pfe /usr/local/bin/
 ```
 
 ```

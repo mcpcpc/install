@@ -66,8 +66,6 @@ kiss b libelf
 kiss i libelf
 kiss b ncurses
 kiss i ncurses
-kiss b git
-kiss i git
 kiss b vim
 kiss i vim
 kiss b openssh

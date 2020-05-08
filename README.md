@@ -125,8 +125,8 @@ kiss i alsa-utils
 kiss b xorg-server xinit xf86-input-libinput
 kiss b xf86-video-amdgpu
 kiss i xf86-video-amdgpu
-kiss b dmenu
-kiss i dmenu
+kiss b sowm
+kiss i sowm
 kiss b st
 kiss i st
 ```

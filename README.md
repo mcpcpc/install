@@ -155,8 +155,15 @@ kiss b liberation-fonts
 kiss i liberation-fonts
 kiss b xf86-video-amdgpu
 kiss i xf86-video-amdgpu
-kiss b sowm
-kiss i sowm
 kiss b st
 kiss i st
+```
+
+```
+kiss b sowm
+kiss i sowm
+kiss b mpv
+kiss i mpv
+kiss b firefox
+kiss i firefox
 ```

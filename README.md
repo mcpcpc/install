@@ -119,6 +119,15 @@ install pfetch/pfetch /usr/local/bin/
 ls -l /usr/local/bin/pfetch
 ```
 
+```sh
+git clone https://git.suckless.org/sic
+cd sic && make clean install && cd .. && rm -r sic
+git clone https://git.suckless.org/slock
+cd slock && make clean install && cd .. && rm -r slock
+git clone https://git.suckless.org/dmenu
+cd dmenu && make clean install && cd .. && rm -r dmenu
+```
+
 ```
 kiss b alsa-utils
 kiss i alsa-utils

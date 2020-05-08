@@ -132,7 +132,7 @@ cd dmenu && make clean install && cd .. && rm -r dmenu
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/bud
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/x
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr
-
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe
 ```
 
 ```

@@ -135,6 +135,7 @@ cd ImageMagick*
 ./configure
 make
 make install
+cd .. && rm -r ImageMagick*
 ```
 
 ```sh

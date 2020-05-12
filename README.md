@@ -68,6 +68,8 @@ kiss b ncurses
 kiss i ncurses
 kiss b vim
 kiss i vim
+url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
+mkdir /etc/vim && cd /etc/vim/ && wget "$url3/vimrc" 
 kiss b openssh
 kiss i openssh
 mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
@@ -80,7 +82,6 @@ cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.12.tar.xz
 tar xvf linux-*
 cd linux-*
-url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url3/.config"
 make menuconfig
 wget https://k1ss.org/dist/kernel-no-perl.patch

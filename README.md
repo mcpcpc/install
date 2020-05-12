@@ -70,14 +70,14 @@ kiss b vim
 kiss i vim
 kiss b openssh
 kiss i openssh
-mkdir /usr/lib/firmware
-cd /usr/lib/firmware
-wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
+mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
+cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+cp iwlwifi-3168-2* /usr/lib/firmware/
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-22.ucode
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-27.ucode
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-29.ucode
 cd /usr/src
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.8.tar.xz
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.12.tar.xz
 tar xvf linux-*
 cd linux-*
 url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
@@ -108,34 +108,14 @@ mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
 wget "$url3/wpa_supplicant.conf"
 ln -s /etc/sv/udevd/ /var/service
-ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
+# ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service
 ln -s /etc/sv/sshd/ /var/service
 ```
 
 ```sh
-git clone https://github.com/dylanaraps/pfetch.git
-install pfetch/pfetch /usr/local/bin/
-ls -l /usr/local/bin/pfetch
-```
-
-```sh
-git clone https://git.suckless.org/sic
-cd sic && make clean install && cd .. && rm -r sic
-git clone https://git.suckless.org/slock
-cd slock && make clean install && cd .. && rm -r slock
-git clone https://git.suckless.org/dmenu
-cd dmenu && make clean install && cd .. && rm -r dmenu
-```
-
-```sh
-wget https://imagemagick.org/download/ImageMagick.tar.gz
-tar xvzf ImageMagick.tar.gz
-cd ImageMagick*
-./configure
-make
-make install
-cd .. && rm -r ImageMagick*
+cd /var/db/kiss/
+git clone https://github.com/kisslinux/community.git
 ```
 
 ```sh
@@ -149,7 +129,9 @@ wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe
 install pfe /usr/local/bin/
 ```
 
-```
+```sh
+kiss b screen
+kiss i screen
 kiss b alsa-utils
 kiss i alsa-utils
 kiss b xorg-server xinit xf86-input-libinput
@@ -159,13 +141,13 @@ kiss b xf86-video-amdgpu
 kiss i xf86-video-amdgpu
 kiss b st
 kiss i st
-kiss b mpv
-kiss i mpv
+kiss b sowm
+kiss i sowm
 ```
 
 ```
-kiss b sowm
-kiss i sowm
-kiss b firefox
-kiss i firefox
+kiss b surf
+kiss i surf
+kiss b mpv
+kiss i mpv
 ```

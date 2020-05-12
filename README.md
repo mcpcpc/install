@@ -82,6 +82,7 @@ tar xvf linux-*
 cd linux-*
 url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url3/.config"
+make menuconfig
 wget https://k1ss.org/dist/kernel-no-perl.patch
 git apply -v kernel-no-perl.patch
 make -j8
@@ -119,14 +120,10 @@ git clone https://github.com/kisslinux/community.git
 ```
 
 ```sh
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/bud && chmod +x bud
-install bud /usr/local/bin/
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x
-install x /usr/local/bin/
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr
-install scr /usr/local/bin/
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe
-install pfe /usr/local/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/bud && chmod +x bud && install bud /usr/local/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/local/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/local/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/local/bin/
 ```
 
 ```sh
@@ -146,6 +143,8 @@ kiss i sowm
 ```
 
 ```
+kiss b imagemagick
+kiss i imagemagick
 kiss b surf
 kiss i surf
 kiss b mpv

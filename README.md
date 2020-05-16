@@ -75,9 +75,6 @@ kiss i openssh
 mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
 cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 cp iwlwifi-3168-2* /usr/lib/firmware/
-wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-22.ucode
-wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-27.ucode
-wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/iwlwifi-3168-29.ucode
 cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.12.tar.xz
 tar xvf linux-*

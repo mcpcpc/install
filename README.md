@@ -74,7 +74,7 @@ mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firm
 cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 cp iwlwifi-3168-2* /usr/lib/firmware/
 cd /usr/src
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.12.tar.xz
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.14.tar.xz
 tar xvf linux-*
 cd linux-*
 wget "$url3/.config"

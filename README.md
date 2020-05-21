@@ -129,7 +129,7 @@ kiss b screen
 kiss i screen
 kiss b alsa-utils
 kiss i alsa-utils
-kiss b xorg-server xinit xf86-input-libinput
+kiss b xorg-server xf86-input-libinput
 kiss b xauth
 kiss i xauth
 kiss b liberation-fonts

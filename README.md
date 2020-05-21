@@ -37,7 +37,7 @@ mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkfs.vfat -F 32 /dev/sda2
 mount /dev/sda3 /mnt/gentoo
-url1=github.com/kisslinux/repo/releases/download/1.9.11
+url1=github.com/kisslinux/repo/releases/download/1.10.0
 url2=raw.githubusercontent.com/kisslinux/kiss/master/contrib
 wget "$url1/kiss-chroot.tar.xz"
 wget "$url2/kiss-chroot"

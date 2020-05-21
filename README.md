@@ -67,8 +67,8 @@ kiss b libelf
 kiss i libelf
 kiss b ncurses
 kiss i ncurses
-url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
-mkdir /etc/vim && cd /etc/vim/ && wget "$url3/vimrc" 
+url=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
+mkdir /etc/vim && cd /etc/vim/ && wget "$url/vimrc" 
 kiss b openssh
 kiss i openssh
 mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
@@ -78,7 +78,7 @@ cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.14.tar.xz
 tar xvf linux-*
 cd linux-*
-wget "$url3/.config"
+wget "$url/.config"
 make menuconfig
 wget https://k1ss.org/dist/kernel-no-perl.patch
 git apply -v kernel-no-perl.patch
@@ -104,7 +104,7 @@ kiss b wpa_supplicant
 kiss i wpa_supplicant
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
-wget "$url3/wpa_supplicant.conf"
+wget "$url/wpa_supplicant.conf"
 ln -s /etc/sv/udevd/ /var/service
 # ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service

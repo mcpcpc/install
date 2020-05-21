@@ -66,8 +66,6 @@ kiss b libelf
 kiss i libelf
 kiss b ncurses
 kiss i ncurses
-kiss b vim
-kiss i vim
 url3=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 mkdir /etc/vim && cd /etc/vim/ && wget "$url3/vimrc" 
 kiss b openssh
@@ -125,6 +123,8 @@ wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe
 ```
 
 ```sh
+kiss b vim
+kiss i vim
 kiss b screen
 kiss i screen
 kiss b alsa-utils

@@ -48,6 +48,7 @@ mkdir /mnt/gentoo/boot/efi
 mount /dev/sda2 /mnt/gentoo/boot/efi
 echo -e "/dev/sda1\t\t/boot\t\tvfat\t\tnoauto,noatime\t1 2" >> /mnt/gentoo/etc/fstab
 echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/gentoo/etc/fstab
+echo "mcpcpc" >> /mnt/gentoo/etc/hostname
 ./kiss-chroot /mnt/gentoo
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="-O3 -pipe -march=native"

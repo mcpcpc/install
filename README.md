@@ -130,6 +130,8 @@ kiss i screen
 kiss b alsa-utils
 kiss i alsa-utils
 kiss b xorg-server xinit xf86-input-libinput
+kiss b xauth
+kiss i xauth
 kiss b liberation-fonts
 kiss i liberation-fonts
 kiss b xf86-video-amdgpu

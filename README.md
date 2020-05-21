@@ -84,8 +84,8 @@ git apply -v kernel-no-perl.patch
 make -j8
 make modules_install
 make install
-mv /boot/vmlinuz /boot/vmlinuz-5.6.8
-mv /boot/System.map /boot/System.map-5.6.8
+mv /boot/vmlinuz /boot/vmlinuz-5.6.14
+mv /boot/System.map /boot/System.map-5.6.14
 kiss b grub
 kiss i grub
 kiss b efibootmgr

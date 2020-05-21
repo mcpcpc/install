@@ -148,6 +148,6 @@ kiss b imagemagick
 kiss i imagemagick
 kiss b surf
 kiss i surf
-kiss b mpv
-kiss i mpv
+kiss b ffmpeg
+kiss i ffmpeg
 ```

@@ -73,11 +73,14 @@ kiss b openssh
 kiss i openssh
 mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
 cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
-cp iwlwifi-3168-2* /usr/lib/firmware/
+cp linux-firmware/iwlwifi-3168-2* /usr/lib/firmware/
+cp linux-firmware/amdgpu/raven_* /usr/lib/firmware/amdgpu/
+cp linux-firmware/amd/* /usr/lib/firmware/amd/
 cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.14.tar.xz
 tar xvf linux-*
 cd linux-*
+url=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 wget "$url/.config"
 make menuconfig
 wget https://k1ss.org/dist/kernel-no-perl.patch

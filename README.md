@@ -133,7 +133,9 @@ kiss b screen
 kiss i screen
 kiss b alsa-utils
 kiss i alsa-utils
-kiss b xorg-server xf86-input-libinput
+kiss b xorg-server 
+kiss b xf86-input-libinput
+kiss i xf86-input-libinput
 kiss b xauth
 kiss i xauth
 kiss b liberation-fonts
@@ -144,6 +146,8 @@ kiss b sx
 kiss i sx
 kiss b st
 kiss i st
+kiss b dmenu
+kiss i dmenu
 kiss b sowm
 kiss i sowm
 ```

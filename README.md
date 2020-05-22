@@ -140,6 +140,8 @@ kiss b liberation-fonts
 kiss i liberation-fonts
 kiss b xf86-video-amdgpu
 kiss i xf86-video-amdgpu
+kiss b sx
+kiss i sx
 kiss b st
 kiss i st
 kiss b sowm

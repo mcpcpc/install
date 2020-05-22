@@ -55,22 +55,15 @@ export CXXFLAGS="-O3 -pipe -march=native"
 export MAKEFLAGS="-j8"
 kiss update
 cd /var/db/kiss/installed && kiss build *
-kiss b e2fsprogs
-kiss i e2fsprogs
-kiss b dosfstools
-kiss i dosfstools
-kiss b util-linux
-kiss i util-linux
-kiss b eudev
-kiss i eudev
-kiss b libelf
-kiss i libelf
-kiss b ncurses
-kiss i ncurses
+kiss b e2fsprogs && kiss i e2fsprogs
+kiss b dosfstools && kiss i dosfstools
+kiss b util-linux && kiss i util-linux
+kiss b eudev && kiss i eudev
+kiss b libelf && kiss i libelf
+kiss b ncurses && kiss i ncurses
 url=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
 mkdir /etc/vim && cd /etc/vim/ && wget "$url/vimrc" 
-kiss b openssh
-kiss i openssh
+kiss b openssh && kiss i openssh
 mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
 cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 cp linux-firmware/iwlwifi-3168-2* /usr/lib/firmware/
@@ -90,21 +83,16 @@ make modules_install
 make install
 mv /boot/vmlinuz /boot/vmlinuz-5.6.14
 mv /boot/System.map /boot/System.map-5.6.14
-kiss b grub
-kiss i grub
-kiss b efibootmgr
-kiss i efibootmgr
+kiss b grub && kiss i grub
+kiss b efibootmgr && kiss i efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=kiss
 grub-mkconfig -o /boot/grub/grub.cfg
-kiss b baseinit
-kiss i baseinit
+kiss b baseinit && kiss i baseinit
 adduser mc
 addgroup mc video
 addgroup mc audio
-kiss b dhcpcd
-kiss i dhcpcd
-kiss b wpa_supplicant
-kiss i wpa_supplicant
+kiss b dhcpcd && kiss i dhcpcd
+kiss b wpa_supplicant && kiss i wpa_supplicant
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
 wget "$url/wpa_supplicant.conf"
@@ -127,36 +115,22 @@ wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe
 ```
 
 ```sh
-kiss b vim
-kiss i vim
-kiss b screen
-kiss i screen
-kiss b alsa-utils
-kiss i alsa-utils
+kiss b vim && kiss i vim
+kiss b screen && kiss i screen
+kiss b alsa-utils && kiss i alsa-utils
 kiss b xorg-server 
-kiss b xf86-input-libinput
-kiss i xf86-input-libinput
-kiss b xauth
-kiss i xauth
-kiss b liberation-fonts
-kiss i liberation-fonts
-kiss b xf86-video-amdgpu
-kiss i xf86-video-amdgpu
-kiss b sx
-kiss i sx
-kiss b st
-kiss i st
-kiss b dmenu
-kiss i dmenu
-kiss b sowm
-kiss i sowm
+kiss b xf86-input-libinput && kiss i xf86-input-libinput
+kiss b xauth && kiss i xauth
+kiss b liberation-fonts && kiss i liberation-fonts
+kiss b xf86-video-amdgpu && kiss i xf86-video-amdgpu
+kiss b sx && kiss i sx
+kiss b st && kiss i st
+kiss b dmenu && kiss i dmenu
+kiss b sowm && kiss i sowm
 ```
 
 ```
-#kiss b imagemagick
-#kiss i imagemagick
-kiss b surf
-kiss i surf
-kiss b ffmpeg
-kiss i ffmpeg
+#kiss b imagemagick && kiss i imagemagick
+kiss b surf && kiss i surf
+kiss b ffmpeg && kiss i ffmpeg
 ```

@@ -103,8 +103,7 @@ ln -s /etc/sv/sshd/ /var/service
 ```
 
 ```sh
-cd /var/db/kiss/
-git clone https://github.com/kisslinux/community.git
+cd /var/db/kiss/ && git clone https://github.com/kisslinux/community.git
 ```
 
 ```sh

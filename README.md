@@ -147,8 +147,8 @@ kiss i sowm
 ```
 
 ```
-kiss b imagemagick
-kiss i imagemagick
+#kiss b imagemagick
+#kiss i imagemagick
 kiss b surf
 kiss i surf
 kiss b ffmpeg

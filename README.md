@@ -104,6 +104,7 @@ ln -s /etc/sv/sshd/ /var/service
 
 ```sh
 cd /var/db/kiss/ && git clone https://github.com/kisslinux/community.git
+echo "export KISS_PATH=/var/db/kiss/repo/core:/var/db/kiss/repo/extra:/var/db/kiss/repo/xorg:/var/db/kiss/community/community" >/etc/profile.d/kiss_path.sh
 ```
 
 ```sh

@@ -7,6 +7,9 @@ export CXXFLAGS=$CFLAGS
 export MAKEFLAGS="-j$CORES"
 export SAMUFLAGS=$MAKEFLAGS
 
+export XDG_DATA_HOME="/home/mc/.sx"
+export XDG_CONFIG_HOME=$XDG_DATA_HOME
+
 alias ll="ls -al"
 alias vi=vim
 alias ..="cd .."

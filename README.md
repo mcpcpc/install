@@ -73,8 +73,7 @@ cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.14.tar.xz
 tar xvf linux-*
 cd linux-*
-url=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
-wget "$url/.config"
+wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
 make menuconfig
 wget https://k1ss.org/dist/kernel-no-perl.patch
 git apply -v kernel-no-perl.patch
@@ -95,7 +94,7 @@ kiss b dhcpcd && kiss i dhcpcd
 kiss b wpa_supplicant && kiss i wpa_supplicant
 mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
-wget "$url/wpa_supplicant.conf"
+wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf
 ln -s /etc/sv/udevd/ /var/service
 # ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service
@@ -123,6 +122,7 @@ kiss b xauth && kiss i xauth
 kiss b liberation-fonts && kiss i liberation-fonts
 kiss b xf86-video-amdgpu && kiss i xf86-video-amdgpu
 kiss b sx && kiss i sx
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
 kiss b st && kiss i st
 kiss b dmenu && kiss i dmenu
 kiss b sowm && kiss i sowm

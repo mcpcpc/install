@@ -97,6 +97,7 @@ cd /etc/wpa_supplicant
 wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf
 ln -s /etc/sv/udevd/ /var/service
 # ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/libexec/dhcpcd-hooks/
+ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/lib/dhcpcd/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service
 ln -s /etc/sv/sshd/ /var/service
 ```

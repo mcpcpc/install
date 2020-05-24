@@ -121,6 +121,8 @@ kiss b alsa-utils && kiss i alsa-utils
 kiss b xorg-server 
 kiss b xf86-input-libinput && kiss i xf86-input-libinput
 kiss b xauth && kiss i xauth
+echo "XAuthLocation /usr/bin/xauth" >> /etc/ssh/sshd_config
+echo "X11Forwarding yes" >> /etc/ssh/sshd_config
 kiss b liberation-fonts && kiss i liberation-fonts
 kiss b xf86-video-amdgpu && kiss i xf86-video-amdgpu
 kiss b sx && kiss i sx

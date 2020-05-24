@@ -129,7 +129,7 @@ kiss b sowm && kiss i sowm
 ```
 
 ```sh
-#kiss b imagemagick && kiss i imagemagick
+kiss b imagemagick && kiss i imagemagick
 kiss b surf && kiss i surf
 kiss b ffmpeg && kiss i ffmpeg
 ```

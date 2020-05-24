@@ -133,6 +133,10 @@ kiss b sowm && kiss i sowm
 ```
 
 ```sh
+mkdir ~/.ssh && cd ~/.ssh && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.ssh/config
+```
+
+```sh
 kiss b imagemagick && kiss i imagemagick
 kiss b ffmpeg && kiss i ffmpeg
 kiss b surf && kiss i surf

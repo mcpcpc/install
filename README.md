@@ -131,6 +131,7 @@ kiss b sowm && kiss i sowm
 ```
 
 ```sh
+cd ~ && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.profile
 mkdir ~/.ssh && cd ~/.ssh && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.ssh/config
 mkdir ~/.sx && mkdir ~/.sx/sx && cd ~/.sx/sx 
 wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc

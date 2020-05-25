@@ -124,7 +124,7 @@ echo "X11Forwarding yes" >> /etc/ssh/sshd_config
 kiss b liberation-fonts && kiss i liberation-fonts
 kiss b xf86-video-amdgpu && kiss i xf86-video-amdgpu
 kiss b sx && kiss i sx
-wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
+
 kiss b st && kiss i st
 kiss b dmenu && kiss i dmenu
 kiss b sowm && kiss i sowm
@@ -132,6 +132,8 @@ kiss b sowm && kiss i sowm
 
 ```sh
 mkdir ~/.ssh && cd ~/.ssh && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.ssh/config
+mkdir ~/.sx && mkdir ~/.sx/sx && cd ~/.sx/sx 
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
 ```
 
 ```sh

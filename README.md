@@ -61,8 +61,6 @@ kiss b util-linux && kiss i util-linux
 kiss b eudev && kiss i eudev
 kiss b libelf && kiss i libelf
 kiss b ncurses && kiss i ncurses
-url=https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master
-mkdir /etc/vim && cd /etc/vim/ && wget "$url/vimrc" 
 kiss b openssh && kiss i openssh
 mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
 cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git

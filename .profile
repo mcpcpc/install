@@ -7,7 +7,7 @@ export CXXFLAGS=$CFLAGS
 export MAKEFLAGS="-j$CORES"                                                                  
 export SAMUFLAGS=$MAKEFLAGS                                                                  
 
-# export KISS_PROMPT=0  # disable prompts (for scripting)
+export KISS_PROMPT=1  # 0 to disable prompts (for scripting)
 export KISS_PATH_MAIN=/var/db/kiss/repo/core:/var/db/kiss/repo/extra:/var/db/kiss/repo/xorg
 export KISS_PATH_COMMUNITY=/var/db/kiss/community/community
 export KISS_PATH_PERSONAL=/home/mc/proj/mcpcpc-repo

@@ -115,7 +115,7 @@ wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe
 kiss b vim && kiss i vim
 kiss b screen && kiss i screen
 kiss b alsa-utils && kiss i alsa-utils
-kiss b xorg-server 
+kiss b xorg-server && kiss i xorg-server
 kiss b xf86-input-libinput && kiss i xf86-input-libinput
 kiss b xauth && kiss i xauth
 echo "XAuthLocation /usr/bin/xauth" >> /etc/ssh/sshd_config

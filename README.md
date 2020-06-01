@@ -140,5 +140,5 @@ wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
 ```sh
 kiss b imagemagick && kiss i imagemagick
 kiss b ffmpeg && kiss i ffmpeg
-kiss b surf && kiss i surf
+kiss b firefox-bin && kiss i firefox-bin
 ```

@@ -68,7 +68,7 @@ cp linux-firmware/iwlwifi-3168-2* /usr/lib/firmware/
 cp linux-firmware/amdgpu/raven_* /usr/lib/firmware/amdgpu/
 cp linux-firmware/amd/* /usr/lib/firmware/amd/
 cd /usr/src
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.14.tar.xz
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.15.tar.xz
 tar xvf linux-*
 cd linux-*
 wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
@@ -79,8 +79,8 @@ make menuconfig
 make -j8
 make modules_install
 make install
-mv /boot/vmlinuz /boot/vmlinuz-5.6.14
-mv /boot/System.map /boot/System.map-5.6.14
+mv /boot/vmlinuz /boot/vmlinuz-5.6.15
+mv /boot/System.map /boot/System.map-5.6.15
 kiss b grub && kiss i grub
 kiss b efibootmgr && kiss i efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=kiss

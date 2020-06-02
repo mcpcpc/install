@@ -72,9 +72,10 @@ wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.14.tar.xz
 tar xvf linux-*
 cd linux-*
 wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
-make menuconfig
 wget https://k1ss.org/dist/kernel-no-perl.patch
-git apply -v kernel-no-perl.patch
+#git apply -v kernel-no-perl.patch
+patch -p1 < no-perl.patch
+make menuconfig
 make -j8
 make modules_install
 make install

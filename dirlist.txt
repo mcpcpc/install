@@ -1,1 +1,4 @@
-
+/usr/lib/firmware
+/usr/lib/firmware/amdgpu
+/usr/lib/firmware/amd
+/usr/lib/firmware/amd-ucode

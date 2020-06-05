@@ -51,7 +51,7 @@ echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/gentoo/etc/fstab
 echo "mcpcpc" >> /mnt/gentoo/etc/hostname
 ./kiss-chroot /mnt/gentoo
 
-cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dirlist.tx
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dirlist.tx
 while read paths; do
     mkdir "$paths"
 done < dirlist.txt
@@ -74,10 +74,9 @@ cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-f
 cp linux-firmware/iwlwifi-3168-2* /usr/lib/firmware/
 cp linux-firmware/amdgpu/raven_* /usr/lib/firmware/amdgpu/
 cp linux-firmware/amd/* /usr/lib/firmware/amd/
-cd /usr/src
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.15.tar.xz
-tar xvf linux-*
-cd linux-*
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.15.tar.xz -P /usr/src
+tar xvf /usr/src/linux-*
+cd /usr/src/linux-*
 wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
 wget https://k1ss.org/dist/kernel-no-perl.patch
 patch -p1 < no-perl.patch
@@ -97,7 +96,7 @@ addgroup mc video
 addgroup mc audio
 kiss b dhcpcd && kiss i dhcpcd
 kiss b wpa_supplicant && kiss i wpa_supplicant
-cd /etc/wpa_supplicant && wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf
+wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf -P /etc/wpa_supplicant
 ln -s /etc/sv/udevd/ /var/service
 ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/lib/dhcpcd/dhcpcd-hooks/
 ln -s /etc/sv/dhcpcd/ /var/service
@@ -110,6 +109,14 @@ wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bud &&
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/
+```
+
+```sh
+export KISS_PROMPT=0
+exit && cd
+umount /boot/efi
+umount /boot
+reboot
 ```
 
 ```sh

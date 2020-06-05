@@ -50,6 +50,13 @@ echo -e "/dev/sda1\t\t/boot\t\tvfat\t\tnoauto,noatime\t1 2" >> /mnt/gentoo/etc/f
 echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/gentoo/etc/fstab
 echo "mcpcpc" >> /mnt/gentoo/etc/hostname
 ./kiss-chroot /mnt/gentoo
+
+cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dirlist.tx
+while read repo; do
+    mkdir "$repo"
+done < repolist.txt
+rm dirlist.txt
+
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="-O3 -pipe -march=native"
 export MAKEFLAGS="-j8"
@@ -62,7 +69,6 @@ kiss b eudev && kiss i eudev
 kiss b libelf && kiss i libelf
 kiss b ncurses && kiss i ncurses
 kiss b openssh && kiss i openssh
-mkdir /usr/lib/firmware && mkdir /usr/lib/firmware/amdgpu && mkdir /usr/lib/firmware/amd && mkdir /usr/lib/firmware/amd-ucode
 cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 cp linux-firmware/iwlwifi-3168-2* /usr/lib/firmware/
 cp linux-firmware/amdgpu/raven_* /usr/lib/firmware/amdgpu/
@@ -91,7 +97,6 @@ addgroup mc video
 addgroup mc audio
 kiss b dhcpcd && kiss i dhcpcd
 kiss b wpa_supplicant && kiss i wpa_supplicant
-mkdir /etc/wpa_supplicant
 cd /etc/wpa_supplicant
 wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/wpa_supplicant.conf
 ln -s /etc/sv/udevd/ /var/service

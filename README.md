@@ -1,3 +1,5 @@
+Partition the drive.
+
 ```sh
 root@localhost ~ # gdisk /dev/sda
 Create GPT partition table:
@@ -31,12 +33,16 @@ Command: w ↵
 Do you want to proceed? (Y/N): Y ↵
 ```
 
+Format the partitions.
+
 ```sh
 tmux
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkfs.vfat -F 32 /dev/sda2
 ```
+
+Do a bunch of stuff.
 
 ```sh
 mount /dev/sda3 /mnt/gentoo
@@ -106,6 +112,8 @@ ln -s /etc/sv/dhcpcd/ /var/service
 ln -s /etc/sv/sshd/ /var/service
 ```
 
+Download and install custom binaries.
+
 ```sh
 # as root
 wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bud && chmod +x bud && install bud /usr/bin/
@@ -113,6 +121,8 @@ wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && 
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/
 ```
+
+Exit, unmount and reboot system.
 
 ```sh
 export KISS_PROMPT=0
@@ -122,6 +132,8 @@ umount /boot
 reboot
 ```
 
+Download repositories to the home directory.
+
 ```sh
 # as regular user
 cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.tx
@@ -130,6 +142,8 @@ while read repo; do
 done < repolist.txt
 rm repolist.txt
 ```
+
+Install X server and dependancies.
 
 ```sh
 # as regular user
@@ -146,6 +160,8 @@ echo "XAuthLocation /usr/bin/xauth" >> /etc/ssh/sshd_config
 echo "X11Forwarding yes" >> /etc/ssh/sshd_config
 ```
 
+Download custom dot files.
+
 ```sh
 # as regular user
 cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dotslist.tx
@@ -159,6 +175,8 @@ mkdir ~/.sx && mkdir ~/.sx/sx && cd ~/.sx/sx
 wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
 ```
 
+Install bonus content.
+
 ```sh
 # as regular user
 kiss b imagemagick && kiss i imagemagick
@@ -168,3 +186,5 @@ kiss b dmenu && kiss i dmenu
 kiss b st && kiss i st
 kiss b sowm && kiss i sowm
 ```
+
+Done!

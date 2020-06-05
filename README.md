@@ -102,10 +102,11 @@ ln -s /etc/sv/sshd/ /var/service
 ```
 
 ```sh
-wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.tx
+cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.tx
 while read repo; do
     git clone "$repo"
 done < repolist.txt
+rm repolist.txt
 ```
 
 ```sh

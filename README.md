@@ -80,7 +80,6 @@ tar xvf linux-*
 cd linux-*
 wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.config
 wget https://k1ss.org/dist/kernel-no-perl.patch
-#git apply -v kernel-no-perl.patch
 patch -p1 < no-perl.patch
 make menuconfig
 make -j8
@@ -141,6 +140,11 @@ kiss b sx && kiss i sx
 
 ```sh
 # as regular user
+cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dotslist.tx
+while read dots; do
+    wget "$dots"
+done < dotslist.txt
+rm dotslist.txt
 cd ~ && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.vimrc
 cd ~ && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.profile
 mkdir ~/.ssh && cd ~/.ssh && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.ssh/config

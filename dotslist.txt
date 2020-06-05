@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.vimrc
+https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.profile

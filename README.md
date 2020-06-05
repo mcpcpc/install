@@ -36,6 +36,9 @@ tmux
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkfs.vfat -F 32 /dev/sda2
+```
+
+```sh
 mount /dev/sda3 /mnt/gentoo
 url=github.com/kisslinux/repo/releases/download/1.10.0
 wget "$url/kiss-chroot.tar.xz"

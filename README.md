@@ -107,6 +107,15 @@ ln -s /etc/sv/sshd/ /var/service
 ```
 
 ```sh
+# as root
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bud && chmod +x bud && install bud /usr/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
+wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/
+```
+
+```sh
+# as regular user
 cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.tx
 while read repo; do
     git clone "$repo"
@@ -115,13 +124,7 @@ rm repolist.txt
 ```
 
 ```sh
-wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bud && chmod +x bud && install bud /usr/bin/
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
-wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/
-```
-
-```sh
+# as regular user
 kiss b vim && kiss i vim
 kiss b screen && kiss i screen
 kiss b alsa-utils && kiss i alsa-utils
@@ -133,13 +136,10 @@ echo "X11Forwarding yes" >> /etc/ssh/sshd_config
 kiss b liberation-fonts && kiss i liberation-fonts
 kiss b xf86-video-amdgpu && kiss i xf86-video-amdgpu
 kiss b sx && kiss i sx
-
-kiss b st && kiss i st
-kiss b dmenu && kiss i dmenu
-kiss b sowm && kiss i sowm
 ```
 
 ```sh
+# as regular user
 cd ~ && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.vimrc
 cd ~ && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.profile
 mkdir ~/.ssh && cd ~/.ssh && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.ssh/config
@@ -148,7 +148,11 @@ wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
 ```
 
 ```sh
+# as regular user
 kiss b imagemagick && kiss i imagemagick
 kiss b ffmpeg && kiss i ffmpeg
-kiss b firefox-bin && kiss i firefox-bin
+kiss b firefox-bin && kiss i firefox-binv
+kiss b dmenu && kiss i dmenu
+kiss b st && kiss i st
+kiss b sowm && kiss i sowm
 ```

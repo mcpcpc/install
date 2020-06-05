@@ -52,9 +52,9 @@ echo "mcpcpc" >> /mnt/gentoo/etc/hostname
 ./kiss-chroot /mnt/gentoo
 
 cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dirlist.tx
-while read repo; do
-    mkdir "$repo"
-done < repolist.txt
+while read paths; do
+    mkdir "$paths"
+done < dirlist.txt
 rm dirlist.txt
 
 export CFLAGS="-O3 -pipe -march=native"

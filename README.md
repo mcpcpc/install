@@ -102,7 +102,10 @@ ln -s /etc/sv/sshd/ /var/service
 ```
 
 ```sh
-cd /var/db/kiss/ && git clone https://github.com/kisslinux/community.git
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.tx
+while read repo; do
+    git clone "$repo"
+done < repolist.txt
 ```
 
 ```sh

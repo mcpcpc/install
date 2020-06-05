@@ -116,7 +116,7 @@ Download and install custom binaries.
 
 ```sh
 # as root
-wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bud && chmod +x bud && install bud /usr/bin/
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bin/bud && chmod +x bud && install bud /usr/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
 wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/

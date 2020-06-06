@@ -100,6 +100,7 @@ kiss b efibootmgr && kiss i efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=kiss
 grub-mkconfig -o /boot/grub/grub.cfg
 kiss b baseinit && kiss i baseinit
+kiss b mandoc && kiss i mandoc
 adduser mc
 addgroup mc video
 addgroup mc audio

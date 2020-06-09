@@ -60,7 +60,7 @@ echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/gentoo/etc/fstab
 echo "mcpcpc" >> /mnt/gentoo/etc/hostname
 ./kiss-chroot /mnt/gentoo
 
-wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dirlist.tx
+wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dirlist.txt
 while read paths; do
     mkdir "$paths"
 done < dirlist.txt

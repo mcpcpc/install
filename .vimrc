@@ -2,7 +2,7 @@ set nocp noeb nosol wmnu lz tf
 filetype plugin indent on
 syntax on
 set mouse=a
-set rnu nu
+set nu
 set ww=h,l
 set ts=4 sts=4 sw=4 bs=2 sr ai
 set com=b:#,:%,n:>

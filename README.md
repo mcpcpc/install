@@ -137,7 +137,7 @@ Download repositories to the home directory.
 
 ```sh
 # as regular user
-cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.tx
+cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/repolist.txt
 while read repo; do
     git clone "$repo"
 done < repolist.txt
@@ -165,7 +165,7 @@ Download custom dot files.
 
 ```sh
 # as regular user
-cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dotslist.tx
+cd && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/dotslist.txt
 while read dots; do
     wget "$dots"
 done < dotslist.txt
@@ -174,6 +174,7 @@ rm dotslist.txt
 mkdir ~/.ssh && cd ~/.ssh && wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/.ssh/config
 mkdir ~/.sx && mkdir ~/.sx/sx && cd ~/.sx/sx 
 wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
+chmod +x sxrc
 ```
 
 Install bonus content.

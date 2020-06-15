@@ -1,0 +1,169 @@
+CONTENTS OF THIS FILE
+---------------------
+
+ * Introduction
+ * Partition Formatting
+ * Prepping for Chroot
+ * Install KISS
+ * Post-Install
+ 
+
+PARTITION FORMATTING
+--------------------
+
+The following is an example of a partition schema using gdisk.
+
+    root@localhost ~ # gdisk /dev/sda
+    Create GPT partition table:
+    Command: o ↵
+    This option deletes all partitions and creates a new protective MBR.
+    Proceed? (Y/N): y ↵
+
+    Create Partition 1 (/boot):
+    Command: n ↵
+    Partition Number: ↵ (for 1)
+    First sector: ↵
+    Last sector: +128M ↵
+    Hex Code: ↵
+
+    Create Partition 2 (UEFI ESP):
+    Command: n ↵
+    Partition Number: ↵ (for 2)
+    First sector: ↵
+    Last sector: +33M ↵
+    Hex Code: EF00 ↵
+
+    Create Partition 3 (/):
+    Command: n ↵
+    Partition Number: ↵ (for 3)
+    First sector: ↵
+    Last sector: ↵ (for rest of disk)
+    Hex Code: ↵
+
+    Write Partition Table To Disk:
+    Command: w ↵
+    Do you want to proceed? (Y/N): Y ↵
+
+
+PREPPING FOR CHROOT
+-------------------
+
+* Start tmux or screen.
+
+  tmux
+  
+* Format the partitions created in the previous section.
+
+  mkfs.ext4 /dev/sda1
+  mkfs.ext4 /dev/sda3
+  mkfs.vfat -F 32 /dev/sda2
+
+* Mount the formatted partitions.
+
+  mount /dev/sda3 /mnt/gentoo
+  url=github.com/kisslinux/repo/releases/download/1.10.0
+  wget "$url/kiss-chroot.tar.xz"
+  url=raw.githubusercontent.com/kisslinux/kiss/master/contrib
+  wget "$url/kiss-chroot"
+  chmod +x kiss-chroot
+  tar xvf kiss-chroot.tar.xz -C /mnt/gentoo --strip-components 1
+  mount /dev/sda1 /mnt/gentoo/boot
+  mkdir /mnt/gentoo/boot/efi
+  mount /dev/sda2 /mnt/gentoo/boot/efi
+  echo -e "/dev/sda1\t\t/boot\t\tvfat\t\tnoauto,noatime\t1 2" >> /mnt/gentoo/etc/fstab
+  echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/gentoo/etc/fstab
+  echo "mcpcpc" >> /mnt/gentoo/etc/hostname
+  ./kiss-chroot /mnt/gentoo
+
+
+INSTALLING KISS
+---------------
+
+* Create the needed directories for firmware.
+
+  mdkir -p /usr/lib/firmware
+  mdkir -p /usr/lib/firmware/amdgpu
+  mdkir -p /usr/lib/firmware/amd
+  mdkir -p /usr/lib/firmware/amd-ucode
+
+* Export the environment variables.
+
+  export CFLAGS="-O3 -pipe -march=native"
+  export CXXFLAGS="-O3 -pipe -march=native"
+  export MAKEFLAGS="-j8"
+  export KISS_PROMPT=0
+
+* Update KISS and rebuild all packages.
+
+  kiss update
+  cd /var/db/kiss/installed && kiss build *
+  
+* Install a boatload of packages.
+
+  kiss b e2fsprogs && kiss i e2fsprogs
+  kiss b dosfstools && kiss i dosfstools
+  kiss b util-linux && kiss i util-linux
+  kiss b eudev && kiss i eudev
+  kiss b libelf && kiss i libelf
+  kiss b ncurses && kiss i ncurses
+  kiss b openssh && kiss i openssh
+  
+* Copy firmware to /usr/lib/firmware/.
+
+  cd && git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+  cp linux-firmware/iwlwifi-3168-2* /usr/lib/firmware/
+  cp linux-firmware/amdgpu/raven_* /usr/lib/firmware/amdgpu/
+  cp linux-firmware/amd/* /usr/lib/firmware/amd/
+  
+* Download, patch, configure and install the Kernel.
+
+  wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.2.tar.xz -P /usr/src
+  tar xvf /usr/src/linux-*
+  cd /usr/src/linux-*
+  wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.configiwd
+  mv .configiwd .config
+  wget https://k1ss.org/dist/kernel-no-perl.patch
+  patch -p1 < no-perl.patch
+  make menuconfig
+  make -j8
+  make modules_install
+  make install
+  mv /boot/vmlinuz /boot/vmlinuz-5.7.2
+  mv /boot/System.map /boot/System.map-5.7.2
+
+* Install grub with uefi support.
+
+  kiss b grub && kiss i grub
+  kiss b efibootmgr && kiss i efibootmgr
+  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=kiss
+  grub-mkconfig -o /boot/grub/grub.cfg
+  
+* Add new user (mc).
+
+  adduser mc
+  addgroup mc video
+  addgroup mc audio
+
+* Install wireless and remaining packages.
+
+  kiss b baseinit && kiss i baseinit
+  kiss b eiwd && kiss i eiwd
+  kiss b openresolv && kiss i openresolv
+  ln -s /etc/sv/udevd/ /var/service
+  ln -s /etc/sv/sshd/ /var/service
+  ln -s /etc/sv/eiwd/ /var/service
+
+* Download and install "popular" binary files
+
+  wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bin/bud && chmod +x bud && install bud /usr/bin/
+  wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
+  wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
+  wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/
+  
+* Unmount and reboot system.
+
+  export KISS_PROMPT=0
+  exit && cd
+  umount /boot/efi
+  umount /boot
+  reboot

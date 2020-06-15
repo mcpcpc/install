@@ -153,6 +153,10 @@ INSTALLING KISS
   ln -s /etc/sv/sshd/ /var/service
   ln -s /etc/sv/eiwd/ /var/service
 
+
+POST-INSTALL
+------------
+
 * Download and install "popular" binary files
 
   wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bin/bud && chmod +x bud && install bud /usr/bin/

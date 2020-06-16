@@ -6,6 +6,7 @@ CONTENTS OF THIS FILE
  * Prepping for Chroot
  * Install KISS
  * Post-Install
+ * XORG and Beyond
  
 
 PARTITION FORMATTING
@@ -179,3 +180,19 @@ POST-INSTALL
   umount /boot/efi
   umount /boot
   reboot
+
+
+XORG AND BEYOND
+---------------
+
+* Most of these are based on user preference.
+
+  kiss b vim && kiss i vim
+  kiss b screen && kiss i screen
+  kiss b alsa-utils && kiss i alsa-utils
+  kiss b xorg-server && kiss i xorg-server
+  kiss b xf86-input-libinput && kiss i xf86-input-libinput
+  kiss b xauth && kiss i xauth
+  kiss b liberation-fonts && kiss i liberation-fonts
+  kiss b xf86-video-amdgpu && kiss i xf86-video-amdgpu
+  kiss b sx && kiss i sx

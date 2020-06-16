@@ -1,3 +1,1 @@
 https://github.com/kisslinux/community.git
-https://github.com/kisslinux/wiki.git
-https://github.com/mcpcpc/mcpcpc-repo.git

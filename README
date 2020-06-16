@@ -124,7 +124,6 @@ INSTALLING KISS
   mv .configiwd .config
   wget https://k1ss.org/dist/kernel-no-perl.patch
   patch -p1 < no-perl.patch
-  make menuconfig
   make -j8
   make modules_install
   make install
@@ -171,3 +170,9 @@ POST-INSTALL
   umount /boot/efi
   umount /boot
   reboot
+  
+* Download dot files
+
+  wget https://gist.githubusercontent.com/mcpcpc/e919b292cce6f5f00cdb36457ae7100a/raw/1e5ec38edd3cf035b669f7513063d762d3dc4691/.profile
+  wget https://gist.githubusercontent.com/mcpcpc/1a10213e799006aab6c5946206013e74/raw/525d7f22e4a678663e23f688da468e731f321d76/.ashrc
+  wget https://gist.githubusercontent.com/mcpcpc/c6a62e3313df2618e1be62884ce9e677/raw/c212ebbd0b995e61825b720286d3046f62225d33/.vimrc

@@ -159,10 +159,10 @@ POST-INSTALL
 
 * Download and install "popular" binary files
 
-  wget https://gist.githubusercontent.com/mcpcpc/4123dacda12c3a3d300aa421f9f7f10e/raw/71d98083b2358dc1126c3af431437eb219ac9e6d/bud && chmod +x bud && install bud /usr/bin/
-  wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
-  wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
-  wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/
+  git clone https://gist.github.com/4123dacda12c3a3d300aa421f9f7f10e.git && chmod +x bud && install bud /usr/bin/
+  git clone https://gist.github.com/18633c09040d0182d8508f4d7f2335fd.git && chmod +x x && install x /usr/bin/
+  git clone https://gist.github.com/dfe5a01ec7bb65f74a8c0e80c56e0368.git && chmod +x scr && install scr /usr/bin/
+  git clone https://gist.github.com/d9d8b98c6980cb53cafbe1b3536d1717.git && chmod +x pfe && install pfe /usr/bin/
   
 * Unmount and reboot system.
 

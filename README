@@ -158,11 +158,21 @@ POST-INSTALL
 
 * Download and install "popular" binary files
 
+  
   git clone https://gist.github.com/4123dacda12c3a3d300aa421f9f7f10e.git && chmod +x bud && install bud /usr/bin/
   git clone https://gist.github.com/18633c09040d0182d8508f4d7f2335fd.git && chmod +x x && install x /usr/bin/
   git clone https://gist.github.com/dfe5a01ec7bb65f74a8c0e80c56e0368.git && chmod +x scr && install scr /usr/bin/
   git clone https://gist.github.com/d9d8b98c6980cb53cafbe1b3536d1717.git && chmod +x pfe && install pfe /usr/bin/
-  
+
+* Download "dot" files for regular user (mc)
+
+  su mc
+  cd /home/mc
+  wget https://gist.githubusercontent.com/mcpcpc/e919b292cce6f5f00cdb36457ae7100a/raw/1e5ec38edd3cf035b669f7513063d762d3dc4691/.profile
+  wget https://gist.githubusercontent.com/mcpcpc/1a10213e799006aab6c5946206013e74/raw/525d7f22e4a678663e23f688da468e731f321d76/.ashrc
+  wget https://gist.githubusercontent.com/mcpcpc/c6a62e3313df2618e1be62884ce9e677/raw/c212ebbd0b995e61825b720286d3046f62225d33/.vimrc
+  exit
+
 * Unmount and reboot system.
 
   export KISS_PROMPT=0
@@ -170,10 +180,3 @@ POST-INSTALL
   umount /boot/efi
   umount /boot
   reboot
-  
-* Download "dot" files for regular user (mc)
-
-  cd /home/mc
-  wget https://gist.githubusercontent.com/mcpcpc/e919b292cce6f5f00cdb36457ae7100a/raw/1e5ec38edd3cf035b669f7513063d762d3dc4691/.profile
-  wget https://gist.githubusercontent.com/mcpcpc/1a10213e799006aab6c5946206013e74/raw/525d7f22e4a678663e23f688da468e731f321d76/.ashrc
-  wget https://gist.githubusercontent.com/mcpcpc/c6a62e3313df2618e1be62884ce9e677/raw/c212ebbd0b995e61825b720286d3046f62225d33/.vimrc

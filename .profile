@@ -15,10 +15,11 @@ export KISS_PATH="$KISS_PATH:/home/mc/community/community"
 export XDG_DATA_HOME=/home/mc/.sx
 export XDG_CONFIG_HOME=$XDG_DATA_HOME
 
+# aliases and more
 export ENV="$HOME/.shrc"
 
 # defaults
 export EDITOR="vim"
 export VISUAL=$EDITOR
 export TERMINAL="st"
-export BROWSER="surf"
+export BROWSER="firefox"

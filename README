@@ -159,7 +159,7 @@ POST-INSTALL
 
 * Download and install "popular" binary files
 
-  wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/bin/bud && chmod +x bud && install bud /usr/bin/
+  wget https://gist.githubusercontent.com/mcpcpc/4123dacda12c3a3d300aa421f9f7f10e/raw/71d98083b2358dc1126c3af431437eb219ac9e6d/bud && chmod +x bud && install bud /usr/bin/
   wget https://raw.githubusercontent.com/dylanaraps/bin/master/x && chmod +x x && install x /usr/bin/
   wget https://raw.githubusercontent.com/dylanaraps/bin/master/scr && chmod +x scr && install scr /usr/bin/
   wget https://raw.githubusercontent.com/dylanaraps/bin/master/pfe && chmod +x pfe && install pfe /usr/bin/

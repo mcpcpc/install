@@ -1,7 +1,7 @@
-~/wall/w1.jpg https://all4desktop.com/data_images/original/4244568-sea.jpg
-~/wall/w2.jpg https://issa-schools.org/wp-content/uploads/2017/11/vshrp-wallpapers-55585110-1920x1080.jpg
-~/wall/w3.jpg https://blog.nationalgeographic.org/wp-content/uploads/2016/09/draken-Greenland-1920x1080-1024x576.jpg
-~/wall/w4.jpg https://www.wallpaperflare.com/static/815/816/35/minimalism-clouds-sailing-ship-water-wallpaper.jpg
-~/wall/w5.jpg https://images.alphacoders.com/593/593699.jpg
-~/wall/w6.jpg https://www.beach-backgrounds.com/wallpapers/white-sailboat-on-blue-ocean-beach-background-1920x1080-205.jpg
-~/wall/w7.jpg https://data.1freewallpapers.com/download/sailboat-sea-mountains-fog-waves-1920x1080.jpg
+~/wall/ w1.jpg https://all4desktop.com/data_images/original/4244568-sea.jpg
+~/wall/ w2.jpg https://issa-schools.org/wp-content/uploads/2017/11/vshrp-wallpapers-55585110-1920x1080.jpg
+~/wall/ w3.jpg https://blog.nationalgeographic.org/wp-content/uploads/2016/09/draken-Greenland-1920x1080-1024x576.jpg
+~/wall /w4.jpg https://www.wallpaperflare.com/static/815/816/35/minimalism-clouds-sailing-ship-water-wallpaper.jpg
+~/wall/ w5.jpg https://images.alphacoders.com/593/593699.jpg
+~/wall/ w6.jpg https://www.beach-backgrounds.com/wallpapers/white-sailboat-on-blue-ocean-beach-background-1920x1080-205.jpg
+~/wall/ w7.jpg https://data.1freewallpapers.com/download/sailboat-sea-mountains-fog-waves-1920x1080.jpg

@@ -12,7 +12,11 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-This is my personal installation of KISS Linux, designed to utilize as few resources as possible, while still giving the functionality and customizability of a complete desktop environment experience. In order to replicate this setup, you will still need to configure your kernal (.config file) as the one included is tailored to my hardware (a SimplyNUC Sequioa v8).  
+This is my personal installation of KISS Linux, designed to utilize as few 
+resources as possible, while still giving the functionality and customizability 
+of a complete desktop environment experience. In order to replicate this setup, 
+you will still need to configure your kernal (.config file) as the one included 
+is tailored to my hardware (a SimplyNUC Sequioa v8).  
 
 Enjoy!
 

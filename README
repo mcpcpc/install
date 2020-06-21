@@ -8,6 +8,12 @@ CONTENTS OF THIS FILE
  * Post-Install
  * XORG and Beyond
  
+ 
+INTRODUCTION
+------------
+
+This is my personal installation of KISS Linux, designed to utilize as few resources as possible, while still giving the functionality and customizability of a complete DE experience.  
+
 
 PARTITION FORMATTING
 --------------------

@@ -137,12 +137,6 @@ INSTALLING KISS
   kiss b efibootmgr && kiss i efibootmgr
   grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=kiss
   grub-mkconfig -o /boot/grub/grub.cfg
-  
-* Add new user (mc).
-
-  adduser mc
-  addgroup mc video
-  addgroup mc audio
 
 * Install wireless and remaining packages.
 
@@ -153,11 +147,17 @@ INSTALLING KISS
   ln -s /etc/sv/sshd/ /var/service
   ln -s /etc/sv/eiwd/ /var/service
 
+* Add new user (mc).
+
+  adduser mc
+  addgroup mc video
+  addgroup mc audio
+
 
 POST-INSTALL
 ------------
 
-* Download and install "popular" binary files
+* Download and install "popular" binary files (as root)
 
   wget https://gist.githubusercontent.com/mcpcpc/4123dacda12c3a3d300aa421f9f7f10e/raw/71d98083b2358dc1126c3af431437eb219ac9e6d/bud && chmod +x bud && install bud /usr/bin/
   wget https://gist.githubusercontent.com/mcpcpc/18633c09040d0182d8508f4d7f2335fd/raw/ad311ebb07d178c818dbd539db004f5bf4867d0f/x && chmod +x x && install x /usr/bin/
@@ -166,7 +166,7 @@ POST-INSTALL
   wget https://gist.githubusercontent.com/mcpcpc/079e6878fabca4b916016574678d7125/raw/1ca85cd196a3926f0f0deb76ec777986e04fe051/pb && chmod +x pb && install pb /usr/bin/
   wget https://gist.githubusercontent.com/mcpcpc/ff23d5e875021d9b0b541bc7965a27a7/raw/3c82f861ab756703bfce17090d2217ac6af663fe/svnc && chmod +x svnc && install svnc /usr/bin/
 
-* Download "dot" files for regular user (mc)
+* Download "dot" files for regular user (as regular user, mc)
 
   su mc
   cd /home/mc

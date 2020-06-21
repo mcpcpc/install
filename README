@@ -164,6 +164,7 @@ POST-INSTALL
   wget https://gist.githubusercontent.com/mcpcpc/dfe5a01ec7bb65f74a8c0e80c56e0368/raw/0a4b4851d44e96e5184c1e07721717d24dd57340/scr && chmod +x scr && install scr /usr/bin/
   wget https://gist.githubusercontent.com/mcpcpc/d9d8b98c6980cb53cafbe1b3536d1717/raw/1042e7a330b81d6ad76f9e626a30dd9c0326b019/pfe && chmod +x pfe && install pfe /usr/bin/
   wget https://gist.githubusercontent.com/mcpcpc/079e6878fabca4b916016574678d7125/raw/1ca85cd196a3926f0f0deb76ec777986e04fe051/pb && chmod +x pb && install pb /usr/bin/
+  wget https://gist.githubusercontent.com/mcpcpc/ff23d5e875021d9b0b541bc7965a27a7/raw/3c82f861ab756703bfce17090d2217ac6af663fe/svnc && chmod +x svnc && install svnc /usr/bin/
 
 * Download "dot" files for regular user (mc)
 

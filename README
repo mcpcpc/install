@@ -163,6 +163,7 @@ POST-INSTALL
   git clone https://gist.githubusercontent.com/mcpcpc/18633c09040d0182d8508f4d7f2335fd/raw/ad311ebb07d178c818dbd539db004f5bf4867d0f/x && chmod +x x && install x /usr/bin/
   git clone https://gist.githubusercontent.com/mcpcpc/dfe5a01ec7bb65f74a8c0e80c56e0368/raw/0a4b4851d44e96e5184c1e07721717d24dd57340/scr && chmod +x scr && install scr /usr/bin/
   git clone https://gist.githubusercontent.com/mcpcpc/d9d8b98c6980cb53cafbe1b3536d1717/raw/1042e7a330b81d6ad76f9e626a30dd9c0326b019/pfe && chmod +x pfe && install pfe /usr/bin/
+  git clone https://gist.githubusercontent.com/mcpcpc/079e6878fabca4b916016574678d7125/raw/60cdd93a8db1a21b8cf12f5adb02a7691088425f/paste && chmod +x paste && install paste /usr/bin/
 
 * Download "dot" files for regular user (mc)
 

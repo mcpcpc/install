@@ -18,6 +18,8 @@ of a complete desktop environment experience. In order to replicate this setup,
 you will still need to configure your kernal (.config file) as the one included 
 is tailored to my hardware (a SimplyNUC Sequioa v8).  
 
+For the installation environment, I prefer to use the Gentoo Live CD.
+
 Enjoy!
 
 

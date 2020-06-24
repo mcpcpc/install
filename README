@@ -96,10 +96,10 @@ INSTALLING KISS
 
 * Create the needed directories for firmware.
 
-  mdkir -p /usr/lib/firmware
-  mdkir -p /usr/lib/firmware/amdgpu
-  mdkir -p /usr/lib/firmware/amd
-  mdkir -p /usr/lib/firmware/amd-ucode
+  mkdir -p /usr/lib/firmware
+  mkdir -p /usr/lib/firmware/amdgpu
+  mkdir -p /usr/lib/firmware/amd
+  mkdir -p /usr/lib/firmware/amd-ucode
 
 * Export the environment variables.
 
@@ -138,7 +138,7 @@ INSTALLING KISS
   wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.configiwd
   mv .configiwd .config
   wget https://k1ss.org/dist/kernel-no-perl.patch
-  patch -p1 < no-perl.patch
+  patch -p1 < kernel-no-perl.patch
   make -j8
   make modules_install
   make install

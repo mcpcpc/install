@@ -218,6 +218,7 @@ XORG AND BEYOND
   kiss b dmenu && kiss i dmenu
   kiss b st && kiss i st
   kiss b sowm && kiss i sowm
+  kiss b xinit && kiss i xinit
 
 * Make an sxrc file
 

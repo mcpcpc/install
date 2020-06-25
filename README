@@ -214,10 +214,11 @@ XORG AND BEYOND
   kiss b sx && kiss i sx
   kiss b imagemagick && kiss i imagemagick
   kiss b ffmpeg && kiss i ffmpeg
-  kiss b firefox-bin && kiss i firefox-binv
+  kiss b firefox-bin && kiss i firefox-bin
   kiss b dmenu && kiss i dmenu
   kiss b st && kiss i st
   kiss b sowm && kiss i sowm
+
 
 * Make an sxrc file
 

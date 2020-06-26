@@ -117,7 +117,7 @@ INSTALLING KISS
 
   kiss b e2fsprogs && kiss i e2fsprogs
   kiss b dosfstools && kiss i dosfstools
-  kiss b util-linux && kiss i util-linux
+  # kiss b util-linux && kiss i util-linux
   kiss b eudev && kiss i eudev
   kiss b libelf && kiss i libelf
   kiss b ncurses && kiss i ncurses

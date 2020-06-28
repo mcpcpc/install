@@ -76,7 +76,7 @@ PREPPING FOR CHROOT
 * Mount the formatted partitions.
 
   mount /dev/sda3 /mnt/gentoo
-  url=github.com/kisslinux/repo/releases/download/1.10.0
+  url=github.com/kisslinux/repo/releases/download/1.11.1
   wget "$url/kiss-chroot.tar.xz"
   url=raw.githubusercontent.com/kisslinux/kiss/master/contrib
   wget "$url/kiss-chroot"

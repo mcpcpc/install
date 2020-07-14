@@ -223,5 +223,5 @@ XORG AND BEYOND
 * Make an sxrc file
 
   mkdir ~/.sx && mkdir ~/.sx/sx && cd ~/.sx/sx 
-  wget https://raw.githubusercontent.com/mcpcpc/kiss-sequoia-install/master/sxrc
+  https://gist.githubusercontent.com/mcpcpc/71bcde5af26490817b02c17aa7d3232b/raw/ebec6a36faa2a0429bc7612f05f31453f77ef43b/sxrc
   chmod +x sxrc

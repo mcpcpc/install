@@ -75,21 +75,21 @@ PREPPING FOR CHROOT
 
 * Mount the formatted partitions.
 
-  mount /dev/sda3 /mnt/gentoo
+  mount /dev/sda3 /mnt
   ver=2021.5-1
   url=https://github.com/kiss-community/repo/releases/download/$ver
   wget "$url/kiss-chroot.tar.xz"
   url=raw.githubusercontent.com/kisslinux/kiss/master/contrib
   wget "$url/kiss-chroot"
   chmod +x kiss-chroot
-  tar xvf kiss-chroot.tar.xz -C /mnt/gentoo --strip-components 1
-  mount /dev/sda1 /mnt/gentoo/boot
-  mkdir /mnt/gentoo/boot/efi
-  mount /dev/sda2 /mnt/gentoo/boot/efi
-  echo -e "/dev/sda1\t\t/boot\t\tvfat\t\tnoauto,noatime\t1 2" >> /mnt/gentoo/etc/fstab
-  echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/gentoo/etc/fstab
-  echo "mcpcpc" >> /mnt/gentoo/etc/hostname
-  ./kiss-chroot /mnt/gentoo
+  tar xvf kiss-chroot.tar.xz -C /mnt --strip-components 1
+  mount /dev/sda1 /mnt/boot
+  mkdir /mnt/boot/efi
+  mount /dev/sda2 /mnt/boot/efi
+  echo -e "/dev/sda1\t\t/boot\t\tvfat\t\tnoauto,noatime\t1 2" >> /mnt/etc/fstab
+  echo -e "/dev/sda3\t\t/\t\text4\t\tnoatime\t\t0 1" >> /mnt/etc/fstab
+  echo "mcpcpc" >> /mnt/etc/hostname
+  ./kiss-chroot /mnt
 
 
 INSTALLING KISS

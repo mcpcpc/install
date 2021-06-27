@@ -76,7 +76,8 @@ PREPPING FOR CHROOT
 * Mount the formatted partitions.
 
   mount /dev/sda3 /mnt/gentoo
-  url=github.com/kisslinux/repo/releases/download/1.11.1
+  ver=2021.5-1
+  url=https://github.com/kiss-community/repo/releases/download/$ver
   wget "$url/kiss-chroot.tar.xz"
   url=raw.githubusercontent.com/kisslinux/kiss/master/contrib
   wget "$url/kiss-chroot"
@@ -135,9 +136,9 @@ INSTALLING KISS
   wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.2.tar.xz -P /usr/src
   tar xvf /usr/src/linux-*
   cd /usr/src/linux-*
-  wget https://raw.githubusercontent.com/mczigler/kiss-sequoia-install/master/.configiwd
+  wget https://raw.githubusercontent.com/mcpcpc/install/master/.config-5.7.2
   mv .configiwd .config
-  wget https://k1ss.org/dist/kernel-no-perl.patch
+  wget https://k1sslinux.org/dist/kernel-no-perl.patch
   patch -p1 < kernel-no-perl.patch
   make -j8
   make modules_install
